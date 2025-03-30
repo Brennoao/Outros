@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./Magic_Navigation.css">
+</head>
+<body>
+
+    <div class="Navigation">
+
+        <ul>
+          
+          <li class="List Active">
+            <a href="#">
+              <span class="Icon"><ion-icon name="home-outline"></ion-icon></span>
+              <span class="Text">Home</span>
+            </a>
+          </li>
+          
+          <li class="List">
+            <a href="#">
+              <span class="Icon"><ion-icon name="person-outline"></ion-icon></span>
+              <span class="Text">Profile</span>
+            </a>
+          </li>
+          
+          <li class="List">
+            <a href="#">
+              <span class="Icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+              <span class="Text">Mesaages</span>
+            </a>
+          </li>
+          
+          <li class="List">
+            <a href="#">
+              <span class="Icon"><ion-icon name="camera-outline"></ion-icon></span>
+              <span class="Text">Photos</span>
+            </a>
+          </li>
+          
+          <li class="List">
+            <a href="#">
+              <span class="Icon"><ion-icon name="settings-outline"></ion-icon></span>
+              <span class="Text">Settings</span>
+            </a>
+          </li>
+          
+          <div class="Indicator"></div>
+          
+        </ul>
+      
+      </div>
+      
+      <script> const List = document.querySelectorAll('.List');
+        function ActiveLink(){List.forEach((Item) => Item.classList.remove('Active'));
+        this.classList.add('Active');
+        
+      }
+        
+        List.forEach((Item) => Item.addEventListener('click', ActiveLink));
+        
+      </script>
+      
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

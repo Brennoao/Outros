@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+:root {
+  
+  --Black: #222327;
+  --White: #fff;
+  --LightBlue: #2196f3;
+  
+}
+
+body {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--Black);
+  
+}
+
+.Navigation {
+  
+  position: relative;
+  width: 400px;
+  height: 60px;
+  background: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  
+}
+
+.Navigation ul {
+  
+  display: flex;
+  width: 350px;
+    
+}
+
+.Navigation ul li {
+  
+  list-style: none;
+  position: relative;
+  width: 70px;
+  height: 60px;
+  z-index: 2;
+  
+}
+
+.Navigation ul li a {
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.Navigation ul li a .Icon {
+  
+  position: relative;
+  display: block;
+  line-height: 65px;
+  font-size: 22px;
+  transition: 0.4s;
+  color: var(--Black);
+  
+}
+
+.Navigation ul li.Active a .Icon {
+  
+  transform: translateY(-37px);
+  font-size: 30px;
+  color: var(--LightBlue);
+  
+}
+
+.Navigation ul li a .Text {
+  
+  position: absolute;
+  background: var(--LightBlue);
+  color: var(--White);
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 1.2em;
+  transition: 0.5s; 
+  opacity: 0;
+  transform: translateY(10px);
+  
+}
+
+.Navigation ul li.Active a .Text {
+  
+  transform: translateY(-1.5px);
+  opacity: 1;
+  
+}
+
+.Indicator {
+  
+  position: absolute;
+  top: -35px;
+  width: 70px;
+  height: 70px;
+  background: var(--White);
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+.Indicator::before {
+  
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -28px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 18px var(--White);
+  
+}
+
+.Indicator::after {
+  
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: -28px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: -15px 18px var(--White);
+  
+}
+
+.Navigation ul li:nth-child(1).Active ~ .Indicator {
+  
+  transform: translateX(calc(70px * 0));
+  
+}
+
+.Navigation ul li:nth-child(2).Active ~ .Indicator {
+  
+  transform: translateX(calc(70px * 1));
+  
+}
+
+.Navigation ul li:nth-child(3).Active ~ .Indicator {
+  
+  transform: translateX(calc(70px * 2));
+  
+}
+
+.Navigation ul li:nth-child(4).Active ~ .Indicator {
+  
+  transform: translateX(calc(70px * 3));
+  
+}
+
+.Navigation ul li:nth-child(5).Active ~ .Indicator {
+  
+  transform: translateX(calc(70px * 4));
+  
+}
+
+.Navigation ul li:nth-child(6).Active ~ .Indicator {
+  
+  transform: translateX(calc(70px * 3));
+  
+}
